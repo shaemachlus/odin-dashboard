@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid:
+    "sidebar header" 1fr
+    "sidebar article" 5fr
+    / 1fr 4fr;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #1992d4;
+  display: grid;
+}
+
+.header {
+  grid-area: header;
+  background-color: #ffffff;
+  display: grid;
+  grid:
+    "search profile" 1fr
+    "user buttons" 2fr /
+    3fr 1fr;
+}
+
+.search {
+  grid-area: search;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.user {
+  grid-area: user;
+}
+
+.buttons {
+  grid-area: buttons;
+}
+
+.article {
+  grid-area: article;
+  background-color: #e2e8f0;
+  display: grid;
+  grid:
+    "cards announcements" 1fr
+    "cards trending" 1fr
+    / 4fr 1fr;
+}
+
+.cards {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(2, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background-color: #ffffff;
+}
+
+.announcements {
+  grid-area: announcements;
+  background-color: blue;
+}
+
+.trending {
+  grid-area: trending;
+  background-color: violet;
+}
