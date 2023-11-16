@@ -1,2 +1,2 @@
 # odin-dashboard
-A dashboard webpage for practicing CSS grid
+A webpage for practice using CSS Grid

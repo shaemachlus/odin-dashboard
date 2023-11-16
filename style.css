@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  background-color: aqua;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid:
+    "left-sidebar header" 1fr
+    "left-sidebar article" 4fr
+    / 1fr 5fr;
+}
+
+.left-sidebar {
+  grid-area: left-sidebar;
+  background-color: brown;
+}
+
+.article {
+  grid-area: article;
+  display: grid;
+  background-color: bisque;
+  grid: "cards right-sidebar";
+}
+
+.cards {
+  grid-area: cards;
+  background-color: pink;
+  padding: 20px;
+  grid: repeat(2, 100px);
+  .card {
+    background-color: beige;
+  }
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+  background-color: blue;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid:
+    "header1"
+    "header2";
+  .header1 {
+    background-color: blueviolet;
+  }
+  .header2 {
+    background-color: yellow;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
