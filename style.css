@@ -4,57 +4,61 @@
 }
 
 .page-container {
-  background-color: aqua;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid:
-    "left-sidebar header" 1fr
-    "left-sidebar article" 4fr
-    / 1fr 5fr;
+    "sidebar searchbar"
+    "sidebar main-content";
 }
 
-.left-sidebar {
-  grid-area: left-sidebar;
-  background-color: brown;
+.sidebar {
+  background-color: red;
+  width: 100px;
+  grid-area: sidebar;
 }
 
-.article {
-  grid-area: article;
+.searchbar {
+  background-color: blue;
+  height: 10vh;
+  width: 100vw;
+  grid-area: searchbar;
+}
+
+.main-content {
+  background-color: orange;
+  height: 90vh;
+  width: 100vw;
+  grid-area: main-content;
   display: grid;
-  background-color: bisque;
-  grid: "cards right-sidebar";
+  grid: "cards side-cards";
 }
 
 .cards {
-  grid-area: cards;
-  background-color: pink;
-  padding: 20px;
-  grid: repeat(2, 100px);
-  .card {
-    background-color: beige;
-  }
-}
-
-.right-sidebar {
-  grid-area: right-sidebar;
-  background-color: blue;
-}
-
-.header {
-  grid-area: header;
   display: grid;
+  grid-area: cards;
+  background-color: green;
   grid:
-    "header1"
-    "header2";
-  .header1 {
-    background-color: blueviolet;
-  }
-  .header2 {
-    background-color: yellow;
-  }
+    "card card"
+    "card card"
+    "card card";
+  place-items: center;
 }
 
-ul {
-  list-style-type: none;
+.card {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
+
+.side-cards {
+  display: grid;
+  background-color: purple;
+  place-items: center;
+}
+
+.side-card {
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
 }
